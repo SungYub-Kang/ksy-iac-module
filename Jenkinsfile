@@ -1,4 +1,4 @@
-String credentialsId = 'awsCredentials'
+String credentialsId = 'id-cred-aws-20220204'
 
 pipeline {
     agent {
