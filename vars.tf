@@ -1,8 +1,8 @@
 ## Common configuration #################################
 terraform {
   backend "s3" {
-    bucket = "eon-terra-bucket"
-    key    = "terraform.tfstate"
+    bucket = "ksy-terra-bucket"
+    key    = "ksy-emarket-terraform.tfstate"
     region = "ap-northeast-1"
   }
   required_version = ">= 0.12"
@@ -22,11 +22,12 @@ resource "random_string" "random" {
 }
 
 ## Ask the resource prefix
-/*
+
 variable "resource_prefix" {
+  default = "ksy-emarket"
   description = "Input the resource prefix (eg. kim)"
 }
-*/
+
 
 ## EKS configuration ###################################
 variable "cluster_name" {
