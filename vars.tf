@@ -1,15 +1,15 @@
 ## Common configuration #################################
 terraform {
   backend "s3" {
-    bucket = "ksy-terra-bucket"
-    key    = "ksy-emarket-terraform.tfstate"
-    region = "ap-northeast-1"
+    bucket = "kang-terra-bucket"
+    key    = "kang-emarket-terraform.tfstate"
+    region = "ap-northeast-3"
   }
   required_version = ">= 0.12"
 }
 
 variable "aws_region" {
-  default = "ap-southeast-1"
+  default = "ap-southeast-3"
   description = "AWS region"
 }
 
@@ -24,7 +24,7 @@ resource "random_string" "random" {
 ## Ask the resource prefix
 
 variable "resource_prefix" {
-  default = "ksy-emarket"
+  default = "kang-emarket"
   description = "Input the resource prefix (eg. kim)"
 }
 
