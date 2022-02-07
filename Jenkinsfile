@@ -59,7 +59,7 @@ pipeline {
                         secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
                         ]]) {
                             ansiColor('xterm') {
-                              sh 'terraform show'
+                              sh 'terraform apply -auto-approve'
                             }
                     }
                 }
